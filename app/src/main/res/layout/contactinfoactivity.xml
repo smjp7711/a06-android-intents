@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="48dp" />
+
+    <ImageView
+        android:id="@+id/contact_iconIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_person"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/contact_nameIV"
+        style="@style/AppTheme.ContactInfo.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/first_name_hint"
+        app:layout_constraintTop_toBottomOf="@+id/contact_iconIV"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+       />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipgroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_nameIV"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/phonechip"
+            style="@style/AppTheme.ContactInfo.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call_button_label"
+            app:chipIcon="@drawable/ic_phone_black_24dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/text_chip"
+            style="@style/AppTheme.ContactInfo.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_button_label"
+            app:chipIcon="@drawable/ic_textsms_black_24dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/email_chip"
+            style="@style/AppTheme.ContactInfo.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_hint"
+            app:chipIcon="@drawable/ic_email_black_24dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/map_chip"
+            style="@style/AppTheme.ContactInfo.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/directions_button_label"
+            app:chipIcon="@drawable/ic_directions_black_24dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <ImageView
+        android:id="@+id/phone2IV"
+        android:layout_width="wrap_content"
+        style="@style/AppTheme.ImageView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@+id/chipgroup1"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/ic_phone_black_24dp" />
+
+    <TextView
+        android:id="@+id/phone_numberTV"
+        style="@style/AppTheme.ContactForm.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:hint="@string/phone_hint"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@+id/chipgroup1" />
+
+    <ImageView
+        android:id="@+id/email2IV"
+        android:layout_width="wrap_content"
+        style="@style/AppTheme.ImageView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin1"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@+id/phone2IV"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/ic_email_black_24dp" />
+    <TextView
+        android:id="@+id/emailTV"
+        style="@style/AppTheme.ContactForm.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:hint="@string/email_hint"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@+id/phone_numberTV" />
+    <ImageView
+        android:id="@+id/location2IV"
+        android:layout_width="wrap_content"
+        style="@style/AppTheme.ImageView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@+id/email2IV"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/ic_place_black_24dp" />
+    <TextView
+        android:id="@+id/addressTV"
+        style="@style/AppTheme.ContactForm.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:hint="@string/address_hint"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@id/emailTV" />
+    <ImageView
+        android:id="@+id/webpage2IV"
+        android:layout_width="wrap_content"
+        style="@style/AppTheme.ImageView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@+id/location2IV"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/ic_public_black_24dp" />
+    <TextView
+        android:id="@+id/webpageTV"
+        style="@style/AppTheme.ContactForm.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:hint="@string/website_hint"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_icon"
+        app:layout_constraintTop_toBottomOf="@+id/addressTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,7 @@
     <!-- Style of the Chip elements used in the Contact Info activity -->
     <style name="AppTheme.ContactInfo.Chip" parent="Widget.MaterialComponents.Chip.Action">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="chipStartPadding">12dp</item>
         <item name="chipEndPadding">12dp</item>
         <item name="chipIconTint">@android:color/white</item>
